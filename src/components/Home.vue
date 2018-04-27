@@ -10,8 +10,8 @@
         </v-layout>
         <v-layout row wrap class="mt-2">
             <v-flex xs12>
-                <v-carousel>
-                    <v-carousel-item v-for="meetup in meetups" :src="meetup.imageUrl" :key="meetup.id">
+                <v-carousel style="cursor: pointer;">
+                    <v-carousel-item v-for="meetup in meetups" :src="meetup.imageUrl" :key="meetup.id" @click.native="onloadMeetup(meetup.id)">
                         <div class="title">
                             {{ meetup.title }}
                         </div>
@@ -36,6 +36,11 @@ export default {
                 { imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/d/d1/Contest_area_Def_Con_24.agr.jpg', id: '5ww3rw', title: 'Meetup in DEF CON' },
                 { imageUrl: 'https://upload.wikimedia.org/wikipedia/commons/8/8c/Maker_Faire_2008_spinning_lights.jpg', id: 't6ur5y', title: 'Meetup in Maker Faire' }
             ]
+        }
+    },
+    methods: {
+        onloadMeetup (id) {
+            this.$router.push('/meetup/' + id)
         }
     }
 }

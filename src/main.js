@@ -12,7 +12,8 @@ import {
     VGrid,
     VToolbar,
     transitions,
-    VCarousel
+    VCarousel,
+    VCard
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
 
@@ -27,7 +28,8 @@ Vue.use(Vuetify, {
         VGrid,
         VToolbar,
         transitions,
-        VCarousel
+        VCarousel,
+        VCard
     },
     theme: {
         primary: '#3F51B5',
