@@ -14,7 +14,9 @@ import {
     VToolbar,
     transitions,
     VCarousel,
-    VCard
+    VCard,
+    VDataTable,
+    VTextField
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
 
@@ -30,7 +32,9 @@ Vue.use(Vuetify, {
         VToolbar,
         transitions,
         VCarousel,
-        VCard
+        VCard,
+        VDataTable,
+        VTextField
     },
     theme: {
         primary: '#3F51B5',
