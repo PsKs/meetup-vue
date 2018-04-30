@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App'
+import * as firebase from 'firebase'
 import router from './router'
 import { store } from './store'
 import {
@@ -61,5 +62,15 @@ new Vue({
     el: '#app',
     router,
     store,
-    render: h => h(App)
+    render: h => h(App),
+    created () {
+        firebase.initializeApp({
+            apiKey: 'AIzaSyBZK6MNKcJ0kDIIqq2J7JDcT9WL95Qt9G8',
+            authDomain: 'vuefs-prod-a5a5e.firebaseapp.com',
+            databaseURL: 'https://vuefs-prod-a5a5e.firebaseio.com',
+            projectId: 'vuefs-prod-a5a5e',
+            storageBucket: 'vuefs-prod-a5a5e.appspot.com',
+            messagingSenderId: '189605483509'
+        })
+    }
 })
