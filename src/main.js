@@ -21,6 +21,7 @@ import {
     VTimePicker
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
+import DateFilter from './filters/date'
 
 Vue.use(Vuetify, {
     components: {
@@ -52,6 +53,8 @@ Vue.use(Vuetify, {
 })
 
 Vue.config.productionTip = false
+
+Vue.filter('date', DateFilter)
 
 /* eslint-disable no-new */
 new Vue({
