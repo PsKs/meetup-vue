@@ -19,10 +19,12 @@ import {
     VDataTable,
     VTextField,
     VDatePicker,
-    VTimePicker
+    VTimePicker,
+    VAlert
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
 import DateFilter from './filters/date'
+import AlertCmp from './components/Shared/Alert'
 
 Vue.use(Vuetify, {
     components: {
@@ -40,7 +42,8 @@ Vue.use(Vuetify, {
         VDataTable,
         VTextField,
         VDatePicker,
-        VTimePicker
+        VTimePicker,
+        VAlert
     },
     theme: {
         primary: '#3F51B5',
@@ -56,6 +59,8 @@ Vue.use(Vuetify, {
 Vue.config.productionTip = false
 
 Vue.filter('date', DateFilter)
+
+Vue.component('app-alert', AlertCmp)
 
 /* eslint-disable no-new */
 new Vue({
