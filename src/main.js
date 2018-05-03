@@ -79,6 +79,11 @@ new Vue({
             storageBucket: 'vuefs-prod-a5a5e.appspot.com',
             messagingSenderId: '189605483509'
         })
+        firebase.auth().onAuthStateChanged((user) => {
+            if (user) {
+                this.$store.dispatch('autoSignIn', user)
+            }
+        })
         // First load meetups.
         this.$store.dispatch('loadMeetup')
     }
