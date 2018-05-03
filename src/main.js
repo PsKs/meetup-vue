@@ -20,7 +20,8 @@ import {
     VTextField,
     VDatePicker,
     VTimePicker,
-    VAlert
+    VAlert,
+    VProgressCircular
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
 import DateFilter from './filters/date'
@@ -43,7 +44,8 @@ Vue.use(Vuetify, {
         VTextField,
         VDatePicker,
         VTimePicker,
-        VAlert
+        VAlert,
+        VProgressCircular
     },
     theme: {
         primary: '#3F51B5',
@@ -77,5 +79,7 @@ new Vue({
             storageBucket: 'vuefs-prod-a5a5e.appspot.com',
             messagingSenderId: '189605483509'
         })
+        // First load meetups.
+        this.$store.dispatch('loadMeetup')
     }
 })
