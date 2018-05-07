@@ -21,12 +21,14 @@ import {
     VDatePicker,
     VTimePicker,
     VAlert,
-    VProgressCircular
+    VProgressCircular,
+    VDialog,
+    VDivider
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
 import DateFilter from './filters/date'
 import AlertCmp from './components/Shared/Alert'
-
+import EditMeetupDetailsDialog from './components/Meetup/Edit/EditMeetupDetailsDialog'
 Vue.use(Vuetify, {
     components: {
         VApp,
@@ -45,7 +47,9 @@ Vue.use(Vuetify, {
         VDatePicker,
         VTimePicker,
         VAlert,
-        VProgressCircular
+        VProgressCircular,
+        VDialog,
+        VDivider
     },
     theme: {
         primary: '#3F51B5',
@@ -63,6 +67,7 @@ Vue.config.productionTip = false
 Vue.filter('date', DateFilter)
 
 Vue.component('app-alert', AlertCmp)
+Vue.component('app-edit-meetup-details-dialog', EditMeetupDetailsDialog)
 
 /* eslint-disable no-new */
 new Vue({
