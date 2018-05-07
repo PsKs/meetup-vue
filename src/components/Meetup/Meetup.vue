@@ -29,6 +29,10 @@
                     <v-card-text>
                         <div class="info--text">{{ meetup.date | date }} - {{ meetup.location }}</div>
                         <div>{{ meetup.description }}</div>
+                        <div>
+                            <app-edit-meetup-date-dialog :meetup="meetup" v-if="userIsCreator"></app-edit-meetup-date-dialog>
+                            <app-edit-meetup-time-dialog :meetup="meetup" v-if="userIsCreator"></app-edit-meetup-time-dialog>
+                        </div>
                     </v-card-text>
                     <v-card-actions>
                         <v-spacer></v-spacer>
